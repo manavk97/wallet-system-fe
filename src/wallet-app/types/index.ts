@@ -20,7 +20,7 @@ export type transactionPayload = {
 };
 
 export type trasactionCreateType = {
-    balance: number,
+    amount: number,
     type: string,
     description: string,
     id: string,

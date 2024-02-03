@@ -69,8 +69,7 @@ export const TransactionPage: React.FC = () => {
     type: selectedTransacType,
     description: selectedDescription,
     id: walletData?.id,
-  };
-
+  }
   const postTransactions: any = useSetUpTransaction(postData);
 
   const { data: TransactionTableData } = useGetAllTransaction({

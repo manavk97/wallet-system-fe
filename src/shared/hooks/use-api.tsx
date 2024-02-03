@@ -1,9 +1,6 @@
 import { useReducer, useCallback } from "react"
 import { ApiResponse, ResponseError } from "shared/interfaces/http.interface"
 import { RollInput } from "shared/models/roll"
-import { getHomeboardStudents } from "api/get-homeboard-students"
-import { getActivities } from "api/get-activities"
-import { saveActiveRoll } from "api/save-active-roll"
 
 interface Options {
   url: Endpoint
@@ -21,15 +18,6 @@ export function useApi<ReturnType = {}>({ url, initialLoadState = "loading" }: O
         } else if (result.error) {
           dispatch({ type: "error", error: result.error })
         }
-      }
-
-      switch (url) {
-        case "get-homeboard-students":
-          return getHomeboardStudents().then(process)
-        case "get-activities":
-          return getActivities().then(process)
-        case "save-roll":
-          return saveActiveRoll(params as RollInput).then(process)
       }
     },
     [url]

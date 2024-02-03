@@ -10,7 +10,6 @@ import { GlobalStyle } from "shared/styles/global-style"
 
 // Components
 import WalletApp from "wallet-app"
-import { LoginPage } from "wallet-app/components/login/login.page"
 
 // Css
 import "index.css"
