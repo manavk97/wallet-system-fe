@@ -44,10 +44,10 @@ export const WalletPage: React.FC = () => {
             <h1>Create a wallet</h1>
             <form onSubmit={(e) => handleCreateWallet(e)}>
               <div className="form-section">
-                <label>Username</label>
+                <label>Name</label>
                 <br />
                 <input
-                  placeholder="username"
+                  placeholder="Name"
                   name="name"
                   onChange={(e) =>
                     setData({ ...walletdata, name: e.target.value })
